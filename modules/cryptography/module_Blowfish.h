@@ -57,6 +57,9 @@ private:
 	EVP_CIPHER_CTX *ctx;
 	std::vector<uint8_t> iv;
 
+#endif // #if __has_include(<openssl/blowfish.h>)
+#endif
+
 public:
 	static void _bind_methods();
 	module_Blowfish();
@@ -66,6 +69,4 @@ public:
 	String decrypt(String ciphertext);
 };
 
-#endif // __has_include(<openssl/blowfish.h>)
-#endif
 #endif // MODULE_BLOWFISH_H

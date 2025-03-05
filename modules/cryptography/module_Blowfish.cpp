@@ -104,5 +104,30 @@ String module_Blowfish::decrypt(String ciphertext) {
 	return ciphertext; // PLACEHOLDER
 }
 
+#else
+
+bool module_Blowfish::generate_key(size_t bytes) {
+	/*
+	 * This just returns false for now.
+	 */
+
+	return false;
+}
+
+String module_Blowfish::encrypt(String plaintext) {
+	/*
+	 * Non-OpenSSL subroutine that returns an error.
+	 */
+
+	return "Not implemented - Install the OpenSSL Library.";
+}
+
+String module_Blowfish::decrypt(String ciphertext) {
+	/*
+	 * Non-OpenSSL subroutine that returns an err.r
+	 */
+
+	return "Not implemented - Install the OpenSSL Library.";
+}
 #endif // #if __has_include(<openssl/blowfish.h>)
 #endif
