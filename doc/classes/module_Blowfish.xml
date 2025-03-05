@@ -1,0 +1,8 @@
+<class name="module_Blowfish" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+    <brief_description>
+        A Blowfish implementation for GDScript.
+    </brief_description>
+    <description>
+        This is not implemented yet. Do not use.
+    </description>
+</class>
