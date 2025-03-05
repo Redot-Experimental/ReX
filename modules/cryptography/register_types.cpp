@@ -32,15 +32,8 @@
 
 #include "register_types.h"
 #include "core/object/class_db.h"
-
-#ifdef __has_include
-#if __has_include(<openssl/blowfish.h>)
-
 #include "module_Blowfish.h"
 #include "module_RSA.h"
-
-#endif // #if __has_include(<openssl/blowfish.h>)
-#endif
 
 void initialize_cryptography_module(ModuleInitializationLevel p_level) {
 	/*
