@@ -32,14 +32,20 @@
 
 #include "module_RSA.h"
 
+void module_RSA::_bind_methods() {
 #ifdef __has_include
 #if __has_include(<openssl/bio.h>)
 
-void module_RSA::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("generate_keys", "bits"), &module_RSA::generate_keys, DEFVAL(2048));
 	ClassDB::bind_method(D_METHOD("encrypt", "plaintext"), &module_RSA::encrypt);
 	ClassDB::bind_method(D_METHOD("decrypt", "ciphertext"), &module_RSA::decrypt);
+
+#endif // #if __has_include(<openssl/bio.h>)
+#endif
 }
+
+#ifdef __has_include
+#if __has_include(<openssl/bio.h>)
 
 module_RSA::module_RSA() :
 		privkey(nullptr), pubkey(nullptr) {}

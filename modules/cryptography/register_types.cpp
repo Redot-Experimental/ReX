@@ -30,13 +30,17 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
+#include "register_types.h"
+#include "core/object/class_db.h"
+
 #ifdef __has_include
 #if __has_include(<openssl/blowfish.h>)
 
-#include "register_types.h"
-#include "core/object/class_db.h"
 #include "module_Blowfish.h"
 #include "module_RSA.h"
+
+#endif // #if __has_include(<openssl/blowfish.h>)
+#endif
 
 void initialize_cryptography_module(ModuleInitializationLevel p_level) {
 	/*
@@ -57,6 +61,3 @@ void uninitialize_cryptography_module(ModuleInitializationLevel p_level) {
 		return;
 	}
 }
-
-#endif // #if __has_include(<openssl/blowfish.h>)
-#endif

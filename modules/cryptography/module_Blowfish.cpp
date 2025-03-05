@@ -32,9 +32,6 @@
 
 #include "module_Blowfish.h"
 
-#ifdef __has_include
-#if __has_include(<openssl/blowfish.h>)
-
 void module_Blowfish::_bind_methods() {
 	//ClassDB::bind_method(D_METHOD("generate_key", "bytes"), &module_Blowfish::generate_key);
 	//ClassDB::bind_method(D_METHOD("encrypt", "plaintext"), &module_Blowfish::encrypt);
@@ -43,6 +40,9 @@ void module_Blowfish::_bind_methods() {
 
 module_Blowfish::module_Blowfish() {}
 module_Blowfish::~module_Blowfish() {}
+
+#ifdef __has_include
+#if __has_include(<openssl/blowfish.h>)
 
 bool module_Blowfish::generate_key(size_t bytes) {
 	/*
