@@ -36,10 +36,16 @@
 #include <core/crypto/crypto_core.h> // For base64
 #include <core/object/ref_counted.h>
 #include <core/variant/variant.h>
+
+#ifdef define(unix)
+
 #include <openssl/bio.h> // For module_RSA::b64_decode()
 #include <openssl/err.h>
 #include <openssl/pem.h>
 #include <openssl/rsa.h>
+
+#endif
+
 #include <algorithm>
 #include <string>
 #include <vector>
