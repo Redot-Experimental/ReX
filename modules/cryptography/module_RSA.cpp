@@ -243,11 +243,8 @@ String module_RSA::decrypt(const String &ciphertext) {
 
 #else
 
-module_RSA::module_RSA() :
-{}
-
-module_RSA::~module_RSA() :
-{}
+module_RSA::module_RSA() {}
+module_RSA::~module_RSA() {}
 
 std::vector<unsigned char> module_RSA::b64_decode(const String &s) {
 	/*
