@@ -1,4 +1,5 @@
-<class name="module_RSA" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="module_RSA" inherits="Object" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
 	<brief_description>
 		An RSA implementation for GDScript.
 	</brief_description>

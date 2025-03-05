@@ -1,4 +1,5 @@
-<class name="module_Blowfish" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="module_Blowfish" inherits="Object" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
 	<brief_description>
 		A Blowfish implementation for GDScript.
 	</brief_description>
