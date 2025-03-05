@@ -33,19 +33,16 @@
 #ifndef MODULE_RSA_H
 #define MODULE_RSA_H
 
+#ifdef __has_include
+#if __has_include(<openssl/bio.h>)
+
 #include <core/crypto/crypto_core.h> // For base64
 #include <core/object/ref_counted.h>
 #include <core/variant/variant.h>
-
-#ifdef __has_include
-#if __has_include(<openssl/bio.h>)
 #include <openssl/bio.h> // For module_RSA::b64_decode()
 #include <openssl/err.h>
 #include <openssl/pem.h>
 #include <openssl/rsa.h>
-#endif
-#endif
-
 #include <algorithm>
 #include <string>
 #include <vector>
@@ -67,4 +64,6 @@ public:
 	String decrypt(const String &ciphertext);
 };
 
+#endif // #if __has_include(<openssl/bio.h>)
+#endif
 #endif // MODULE_RSA_H

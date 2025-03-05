@@ -33,15 +33,13 @@
 #ifndef MODULE_BLOWFISH_H
 #define MODULE_BLOWFISH_H
 
-#include <core/object/ref_counted.h>
-#include <core/variant/variant.h>
-
 #ifdef __has_include
 #if __has_include(<openssl/blowfish.h>)
+
+#include <core/object/ref_counted.h>
+#include <core/variant/variant.h>
 #include <openssl/blowfish.h>
 #include <openssl/rand.h>
-#endif
-#endif
 
 #include <vector>
 
@@ -61,4 +59,6 @@ public:
 	String decrypt(String ciphertext);
 };
 
+#endif // __has_include(<openssl/blowfish.h>)
+#endif
 #endif // MODULE_BLOWFISH_H

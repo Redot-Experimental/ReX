@@ -32,6 +32,9 @@
 
 #include "module_RSA.h"
 
+#ifdef __has_include
+#if __has_include(<openssl/bio.h>)
+
 void module_RSA::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("generate_keys", "bits"), &module_RSA::generate_keys, DEFVAL(2048));
 	ClassDB::bind_method(D_METHOD("encrypt", "plaintext"), &module_RSA::encrypt);
@@ -237,3 +240,6 @@ String module_RSA::decrypt(const String &ciphertext) {
 	return String(std::string({ decrypted.begin(), decrypted.end() }).c_str());
 	//return String(reinterpret_cast<const char*>(decrypted.data()), decrypted.size());
 }
+
+#endif // #if __has_include(<openssl/bio.h>)
+#endif
