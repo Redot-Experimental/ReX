@@ -39,12 +39,10 @@
 
 #ifdef __has_include
 #if __has_include(<openssl/bio.h>)
-
 #include <openssl/bio.h> // For module_RSA::b64_decode()
 #include <openssl/err.h>
 #include <openssl/pem.h>
 #include <openssl/rsa.h>
-
 #endif // #if __has_include(<openssl/bio.h>)
 #endif
 
@@ -57,29 +55,20 @@ class module_RSA : public Object {
 
 #ifdef __has_include
 #if __has_include(<openssl/bio.h>)
-
 private:
 	EVP_PKEY *privkey;
 	EVP_PKEY *pubkey;
-
 #endif // #if __has_include(<openssl/bio.h>)
 #endif
 
 public:
 	static void _bind_methods();
-
-#ifdef __has_include
-#if __has_include(<openssl/bio.h>)
-
 	module_RSA();
 	~module_RSA();
 	std::vector<unsigned char> b64_decode(const String &s);
 	bool generate_keys(int bits);
 	String encrypt(const String &plaintext);
 	String decrypt(const String &ciphertext);
-
-#endif // #if __has_include(<openssl/bio.h>)
-#endif
 };
 
 #endif // MODULE_RSA_H
