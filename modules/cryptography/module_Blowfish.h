@@ -33,18 +33,25 @@
 #ifndef MODULE_BLOWFISH_H
 #define MODULE_BLOWFISH_H
 
+#include <core/object/ref_counted.h>
+#include <core/variant/variant.h>
+
 #ifdef __has_include
 #if __has_include(<openssl/blowfish.h>)
 
-#include <core/object/ref_counted.h>
-#include <core/variant/variant.h>
 #include <openssl/blowfish.h>
 #include <openssl/rand.h>
+
+#endif
+#endif
 
 #include <vector>
 
 class module_Blowfish : public Object {
 	GDCLASS(module_Blowfish, Object);
+
+#ifdef __has_include
+#if __has_include(<openssl/blowfish.h>)
 
 private:
 	EVP_CIPHER_CTX *ctx;
