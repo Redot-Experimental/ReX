@@ -36,11 +36,11 @@
 #include <core/object/ref_counted.h>
 #include <core/variant/variant.h>
 
-#ifdef define(unix)
-
+#ifdef __has_include
+#if __has_include(<openssl/blowfish.h>)
 #include <openssl/blowfish.h>
 #include <openssl/rand.h>
-
+#endif
 #endif
 
 #include <vector>

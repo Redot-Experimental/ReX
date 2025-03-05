@@ -37,13 +37,13 @@
 #include <core/object/ref_counted.h>
 #include <core/variant/variant.h>
 
-#ifdef define(unix)
-
+#ifdef __has_include
+#if __has_include(<openssl/bio.h>)
 #include <openssl/bio.h> // For module_RSA::b64_decode()
 #include <openssl/err.h>
 #include <openssl/pem.h>
 #include <openssl/rsa.h>
-
+#endif
 #endif
 
 #include <algorithm>
