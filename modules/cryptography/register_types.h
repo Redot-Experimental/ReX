@@ -33,9 +33,14 @@
 #ifndef CRYPTOGRAPHY_REGISTER_TYPES_H
 #define CRYPTOGRAPHY_REGISTER_TYPES_H
 
+#ifdef __has_include
+#if __has_include(<openssl/blowfish.h>)
+
 #include "modules/register_module_types.h"
 
 void initialize_cryptography_module(ModuleInitializationLevel p_level);
 void uninitialize_cryptography_module(ModuleInitializationLevel p_level);
 
+#endif // #if __has_include(<openssl/blowfish.h>)
+#endif
 #endif // CRYPTOGRAPHY_REGISTER_TYPES_H
