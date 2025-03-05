@@ -21,4 +21,27 @@
 	</description>
 	<tutorials>
 	</tutorials>
+	<methods>
+		<method name="decrypt">
+			<return type="String" />
+			<param index="0" name="ciphertext" type="String" />
+			<description>
+				Returns decrypted ciphertext as a String.
+			</description>
+		</method>
+		<method name="encrypt">
+			<return type="String" />
+			<param index="0" name="plaintext" type="String" />
+			<description>
+				Returns encrypted plaintext as a String.
+			</description>
+		</method>
+		<method name="generate_keys">
+			<return type="bool" />
+			<param index="0" name="bits" type="int" default="2048" />
+			<description>
+				Generates keys.
+			</description>
+		</method>
+	</methods>
 </class>

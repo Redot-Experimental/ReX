@@ -8,4 +8,27 @@
 	</description>
 	<tutorials>
 	</tutorials>
+	<methods>
+		<method name="decrypt">
+			<return type="String" />
+			<param index="0" name="ciphertext" type="String" />
+			<description>
+				Returns decrypted ciphertext as a String.
+			</description>
+		</method>
+		<method name="encrypt">
+			<return type="String" />
+			<param index="0" name="plaintext" type="String" />
+			<description>
+				Returns encrypted plaintext as a String.
+			</description>
+		</method>
+		<method name="generate_key">
+			<return type="bool" />
+			<param index="0" name="bytes" type="int" />
+			<description>
+				Generates the key.
+			</description>
+		</method>
+	</methods>
 </class>
