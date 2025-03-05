@@ -40,7 +40,6 @@ void module_RSA::_bind_methods() {
 
 #ifdef __has_include
 #if __has_include(<openssl/bio.h>)
-
 module_RSA::module_RSA() :
 		privkey(nullptr), pubkey(nullptr) {}
 

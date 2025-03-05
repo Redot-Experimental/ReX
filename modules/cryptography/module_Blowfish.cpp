@@ -43,7 +43,6 @@ module_Blowfish::~module_Blowfish() {}
 
 #ifdef __has_include
 #if __has_include(<openssl/blowfish.h>)
-
 bool module_Blowfish::generate_key(size_t bytes) {
 	/*
 	 * Setup encryption key plus mode(s).
@@ -129,5 +128,5 @@ String module_Blowfish::decrypt(String ciphertext) {
 
 	return "Not implemented - Install the OpenSSL Library.";
 }
-#endif // #if __has_include(<openssl/blowfish.h>)
+#endif
 #endif

@@ -67,12 +67,19 @@ private:
 
 public:
 	static void _bind_methods();
+
+#ifdef __has_include
+#if __has_include(<openssl/bio.h>)
+
 	module_RSA();
 	~module_RSA();
 	std::vector<unsigned char> b64_decode(const String &s);
 	bool generate_keys(int bits);
 	String encrypt(const String &plaintext);
 	String decrypt(const String &ciphertext);
+
+#endif // #if __has_include(<openssl/bio.h>)
+#endif
 };
 
 #endif // MODULE_RSA_H

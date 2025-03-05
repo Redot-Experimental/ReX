@@ -38,10 +38,8 @@
 
 #ifdef __has_include
 #if __has_include(<openssl/blowfish.h>)
-
 #include <openssl/blowfish.h>
 #include <openssl/rand.h>
-
 #endif
 #endif
 
@@ -52,12 +50,10 @@ class module_Blowfish : public Object {
 
 #ifdef __has_include
 #if __has_include(<openssl/blowfish.h>)
-
 private:
 	EVP_CIPHER_CTX *ctx;
 	std::vector<uint8_t> iv;
-
-#endif // #if __has_include(<openssl/blowfish.h>)
+#endif
 #endif
 
 public:
